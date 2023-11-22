@@ -4,3 +4,5 @@ build/*
 # ignore Backup files
 *.bak
 
+# ignore data files
+*.csv

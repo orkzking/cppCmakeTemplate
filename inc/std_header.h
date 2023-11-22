@@ -4,6 +4,7 @@
 #include <iostream>
 
 // put here all own coded header
+#include "League.h"
 
 
 #endif
