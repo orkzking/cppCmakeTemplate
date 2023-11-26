@@ -17,5 +17,17 @@ int main(int argc, char **argv)
     League lTest = League();
     lTest.loadLeagueFromCSV(lPath2Data);
 
+    lTest.recalcPointsOfPlayers();
+
+    if (argc > 1)
+    {
+        /* code */
+    }
+    else
+    {
+        lTest.saveLeagueAsCSV("../../../../data/Tabelle_Archonliga_Q3-23_stdPointdistr.csv");
+    }
+    
+
     return EXIT_SUCCESS;
 }

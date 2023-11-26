@@ -73,3 +73,25 @@ void League::loadLeagueFromCSV(std::string pPath2Data)
     
     input.close();
 }
+
+void League::recalcPointsOfPlayers()
+{
+    for (auto dude : zPlayers)
+    {
+        dude.Points = dude.Participations*zPointsPerParticipation+dude.Wins*zPointsPerWin;
+    }
+    std::ranges::sort(zPlayers, std::ranges::greater(), &Player::Points);
+}
+
+void League::saveLeagueAsCSV(std::string pExportPath)
+{
+    std::ofstream ofs = std::ofstream(pExportPath,std::ofstream::out);
+    ofs << "Platz;Spieler;Siege;Draws;Teilnahmen;Punkte;\n";
+    int platz = 1;
+    for (auto dude : zPlayers)
+    {
+        ofs << platz << ";" << dude.Name << ";" << dude.Wins << ";" << dude.Draws << ";" << dude.Participations  << ";" << dude.Points  << ";" << "\n";
+        platz++;
+    }
+    ofs.close();  
+}

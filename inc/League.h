@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include <variant>
+#include <algorithm>
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -23,6 +24,8 @@ public:
     League();
     ~League();
     void loadLeagueFromCSV(std::string pPath2Data);
+    void recalcPointsOfPlayers();
+    void saveLeagueAsCSV(std::string pExportPath);
 };
 
 #endif
