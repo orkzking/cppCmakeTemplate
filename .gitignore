@@ -6,3 +6,6 @@ build/*
 
 # ignore data files
 *.csv
+
+# ignore vscode settings dir
+.vscode/*
