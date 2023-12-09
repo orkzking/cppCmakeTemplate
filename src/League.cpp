@@ -1,9 +1,10 @@
 #include "League.h"
 
-League::League(int& pPointsPerWin, int& pPointsPerParticipation, int& pNmbTournaments)
+League::League(int pPointsPerWin, int pPointsPerParticipation, int pPointsPerDraw, int pNmbTournaments)
 {
     zPointsPerWin = pPointsPerWin;
     zPointsPerParticipation = pPointsPerParticipation;
+    zPointsPerDraw = pPointsPerDraw;
     zNmbTournaments = pNmbTournaments;
     zPlayers = std::vector<Player>();
 }
@@ -12,6 +13,7 @@ League::League()
 {
     zPointsPerWin = 3;
     zPointsPerParticipation = 1;
+    zPointsPerDraw = 0;
     zNmbTournaments = 12;
     zPlayers = std::vector<Player>();
 }
@@ -76,9 +78,9 @@ void League::loadLeagueFromCSV(std::string pPath2Data)
 
 void League::recalcPointsOfPlayers()
 {
-    for (auto dude : zPlayers)
+    for (auto&& dude : zPlayers)
     {
-        dude.Points = dude.Participations*zPointsPerParticipation+dude.Wins*zPointsPerWin;
+        dude.Points = dude.Participations*zPointsPerParticipation+dude.Wins*zPointsPerWin+dude.Draws*zPointsPerDraw;
     }
     std::ranges::sort(zPlayers, std::ranges::greater(), &Player::Points);
 }

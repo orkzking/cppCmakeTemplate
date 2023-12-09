@@ -17,10 +17,11 @@ class League
 private:
     int zPointsPerWin;
     int zPointsPerParticipation;
+    int zPointsPerDraw;
     int zNmbTournaments;
     std::vector<Player> zPlayers;
 public:
-    League(int& pPointsPerWin, int& pPointsPerParticipation, int& pNmbTournaments);
+    League(int pPointsPerWin, int pPointsPerParticipation, int pPointsPerDraw, int pNmbTournaments);
     League();
     ~League();
     void loadLeagueFromCSV(std::string pPath2Data);
