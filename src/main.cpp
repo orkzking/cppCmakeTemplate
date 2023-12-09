@@ -35,21 +35,25 @@ int main(int argc, char **argv)
         break;
 
     case 1:
+        lPpW = 3;
         lPpP = 15;
         lPpD = 1;
         break;
 
     case 2:
+        lPpW = 3;
         lPpP = 12;
         lPpD = 1;
         break;
 
     case 3:
+        lPpW = 3;
         lPpP = 10;
         lPpD = 1;
         break;
 
     case 4:
+        lPpW = 3;
         lPpP = 8;
         lPpD = 1;
         break;
