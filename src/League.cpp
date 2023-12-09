@@ -11,7 +11,7 @@ League::League(int pPointsPerWin, int pPointsPerParticipation, int pPointsPerDra
 
 League::League()
 {
-    zPointsPerWin = 3;
+    zPointsPerWin = 2;
     zPointsPerParticipation = 1;
     zPointsPerDraw = 0;
     zNmbTournaments = 12;

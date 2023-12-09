@@ -3,7 +3,7 @@
 int main(int argc, char **argv)
 {
     std::filesystem::path lPath2Data("");
-    int lReplacemode = 0, lPpW = 3, lPpP = 1, lPpD = 0; //default
+    int lReplacemode = 0, lPpW = 2, lPpP = 1, lPpD = 0; //default
     std::cout<<"Hello World\n";
 
     if(argc > 1)
