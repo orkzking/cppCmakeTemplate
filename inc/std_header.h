@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <filesystem>
+#include <sstream>
 
 // put here all own coded header
 #include "League.h"
